@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhamad Fadhli Nurdiansyah Rangkuti | Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="star-canvas"></canvas>
+  <header class="landing" id="home" > 
+    <canvas id="landing-star-canvas"></canvas>   
+    <div class="landing-content">
+      <h1>Selamat Datang di Website Portofolio Saya</h1>
+      <p>Saya adalah seorang Front-End, System Developer, dan UI/UX Designer.</p>
+      <a href="#profile" class="btn-scroll">Lihat Profil</a>
+      <div class="scroll-indicator">
+        <span>&#8595;</span>
+      </div>      
+    </div>
+  </header>
+  <button class="burger-menu" id="burger-btn" aria-label="Toggle menu">
+  &#9776;
+</button>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#about">Tentang Saya</a></li>
+      <li><a href="#portfolio">Portofolio</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+ 
+  <div class="container">
+    <section id="profile" class="hero fade-in">
+      <img src="images/profile.jpg" class="profile-img">
+      <button id="close-profile-btn" class="esc-btn hidden" onclick="closeProfileZoom()">(CLOSE)</button>
+      <h2>Muhamad Fadhli Nurdiansyah Rangkuti</h2>
+      <p>Membuat solusi yang elegan, futuristik, dan fungsional untuk berbagai kebutuhan.</p>
+    </section>
+    
+    <section id="about" class="fade-in">
+      <h2>Tentang Saya</h2>
+      <p class="justify">
+        Saya adalah seorang profesional yang aktif di dunia industri dan teknologi. Di hari kerja, saya berperan sebagai <strong>operator mesin dan editor</strong> di industri percetakan, di mana saya terbiasa dengan ketelitian, kecepatan, dan efisiensi dalam menghasilkan produk cetak berkualitas. Di hari Minggu, saya melanjutkan peran saya sebagai <strong>mahasiswa Teknik Informatika semester 6</strong>, yang terus memperdalam pemahaman di bidang teknologi informasi dan pengembangan sistem.
+      </p>
+      <p class="justify">
+        Di luar pekerjaan utama, saya juga menjalankan <strong>profesi sampingan sebagai Front-End dan System Developer</strong>, serta aktif dalam bidang <strong>UI/UX Design</strong>. Dalam proyek berskala besar, saya sering mengambil peran sebagai <strong>Project Manager</strong> untuk tim pengembang sistem dan website. Selain itu, saya juga memiliki keterampilan di bidang <strong>desain grafis</strong>, yang mendukung saya dalam menciptakan tampilan dan pengalaman pengguna yang menarik serta profesional.
+      </p>
+      <p class="justify">
+        Saya percaya bahwa kombinasi pengalaman praktis di industri, pendidikan formal di bidang teknologi, dan proyek sampingan yang terus berkembang menjadikan saya seseorang yang fleksibel, kreatif, dan siap memberikan solusi digital yang fungsional dan berdampak.
+      </p>
+    </section>
+    
+    <section id="portfolio" class="fade-in">
+      <h1 > PROJECT TERKINI </h1>
+      <h2>Web Developer</h2>
+      <div class="project">
+        <h3 onclick="toggleGallery1()">PT Jaminan Kredit Indonesia</h3>
+        <p onclick="toggleGallery1()">Mengembangkan website khusus untuk mendukung pelaksanaan event internal perusahaan. Website ini mencakup sistem registrasi peserta dan publikasi konten acara.</p>
+      </div>   
+      <div class="gallery-wrapper hidden" id="wrapper1">
+  <div id="gallery1" class="gallery zoomable">
+    <img src="images/jamkri1.jpeg" alt="Proyek 1">
+    <img src="images/jamkri2.jpeg" alt="Proyek 2">
+    <img src="images/jamkri3.jpeg" alt="Proyek 3">
+    <img src="images/jamkri4.jpeg" alt="Proyek 4">
+    </div>
+</div>   
+
+      <h2>Software Developer</h2>
+      <div class="project">
+        <h3 onclick="toggleGallery2()">KEMENDIKTI SAINTEK</h3>
+        <p onclick="toggleGallery2()">Merancang Sebuah Sistem yang di support ARTIFICIAL INTELLIGENCE yaitu Implementasi Teknologi YOLO dan Reinforcement Learning untuk Monitoring Proyek Digital Berbasis Web</p>
+      </div>
+      
+      <div class="gallery-wrapper hidden" id="wrapper2">
+        <div id="gallery2" class="gallery zoomable">
+
+          <img src="images/manproy1.jpeg" alt="Gambar 1">
+          <img src="images/manproy2.jpeg" alt="Gambar 2">
+          <img src="images/manproy3.jpeg" alt="Gambar 3">
+          <img src="images/manproy4.jpeg" alt="Gambar 4">
+        </div>
+      </div>
+      <h2 >UI/UX Design</h2>
+      <div class="project">
+        <h3 onclick="toggleGallery3()">KEPALA DAERAH</h3>
+        <p onclick="toggleGallery3()">Membuat RAW Design menggunakan Figma dengan desain se minimalis mungkin dan di peruntukan untuk menjalankan program kerja kepala daerah</p>
+      </div>
+      <div class="gallery-wrapper hidden" id="wrapper3">
+        <div id="gallery3" class="gallery zoomable">
+        <img src="images/req1.jpg" alt="Proyek 1">
+        <img src="images/req2.jpg" alt="Proyek 2">
+        <img src="images/req3.jpg" alt="Proyek 3">
+        <img src="images/req4.jpg" alt="Proyek 3">
+      </div>
+    </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Kontak</h2>
+      <div class="contact-grid">
+        <div><strong>Email:</strong> <a href="mailto:mfadhlinrangkuti@gmail.com">mfadhlinrangkuti@gmail.com</a></div>
+        <div><strong>GitHub:</strong> <a href="https://github.com/mfadhlinr" target="_blank">mfadhlinr</a></div>
+        <div><strong>Instagram:</strong> <a href="https://www.instagram.com/fadhlirangkuti" target="_blank">@fadhlirangkuti</a></div>
+        <div><strong>WhatsApp:</strong> <a href="https://wa.me/6281282109538" target="_blank">0812-8210-9538</a></div>
+      </div>
+    </section>
+    
+  <footer>
+    &copy; 2025 Muhamad Fadhli Nurdiansyah Rangkuti. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</div>
+<div id="image-popup" class="popup hidden" onclick="closePopup(event)">
+  <button class="zoom-nav left" onclick="navigateZoom(-1)">⯇</button>
+  <img id="popup-img" src="" alt="Zoomed Image" />
+  <button class="close-btn" onclick="closePopup(event)">✕</button>
+  <button class="zoom-nav right" onclick="navigateZoom(1)">⯈</button>
+</div>
+  </div>
+  </body>
+  </html>
