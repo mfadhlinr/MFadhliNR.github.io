@@ -29,6 +29,21 @@ function setupImageZoom() {
     });
   });
 }
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+
+      // Ganti URL tanpa reload
+      history.replaceState(null, null, " ");
+    }
+  });
+});
+
 
 function startAutoSlide(galleryId) {
   const gallery = document.getElementById(galleryId);
